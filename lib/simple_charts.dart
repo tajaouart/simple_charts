@@ -1,7 +1,4 @@
 library simple_charts;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/date_chart.dart';
+export 'src/percentage_chart.dart';

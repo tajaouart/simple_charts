@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_charts/simple_charts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Charts Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Simple charts Demo'),
     );
   }
 }
@@ -29,38 +30,47 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  final data1 = {
+    DateTime.now(): 10,
+    DateTime.now().add(const Duration(days: 1)): 23,
+    DateTime.now().add(const Duration(days: 2)): 5,
+    DateTime.now().add(const Duration(days: 3)): 15,
+    DateTime.now().add(const Duration(days: 4)): 20,
+    DateTime.now().add(const Duration(days: 5)): 50,
+  };
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  final data2 = {
+    'Data 1': 0,
+    'Data 2': 1,
+    'Data 3': 2,
+    'Data 4': 3,
+  };
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+      appBar: AppBar(title: Text(widget.title)),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            const Text('Example of date chart :'),
+            const SizedBox(
+              height: 24,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            DateChart(data: data1),
+            const SizedBox(
+              height: 52,
             ),
+            const Text('Example of percentage chart :'),
+            const SizedBox(
+              height: 24,
+            ),
+            PercentageChart(data: data2)
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
