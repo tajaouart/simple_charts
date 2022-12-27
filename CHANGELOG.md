@@ -1,3 +1,5 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+Display Date chart.
+Display Percentage chart.
+
