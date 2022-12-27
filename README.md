@@ -3,7 +3,7 @@
 A light widget to display a charts.
 
 
-<img src="TODO" height="600"/>
+<img src="https://raw.githubusercontent.com/tajaouart/simple_charts/main/simple_charts.jpg" height="600"/>
 
 ## Features
 
