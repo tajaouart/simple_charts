@@ -1,6 +1,5 @@
 
-
-A light widget to display a charts.
+Light widgets to display charts.
 
 
 <img src="https://raw.githubusercontent.com/tajaouart/simple_charts/main/simple_charts.jpg" height="600"/>
@@ -8,7 +7,9 @@ A light widget to display a charts.
 ## Features
 
 Display percentage chart.
+
 Display date chart.
+
 You can customize the display or not of the X and/or Y Axis.
 
 
@@ -38,4 +39,4 @@ PercentageChart(
 
 ## Additional information
 
-Don't hesitate to contribute or contact me if needed.
+Don't hesitate to contribute or to contact me if needed.
