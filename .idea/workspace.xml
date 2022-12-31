@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4aee8c00-e97e-442f-bc30-b203374bdf71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/percentage/percentage_chart.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/simple_charts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simple_charts.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/components/date_cell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/date/date_cell.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/date_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/date/date_chart.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/percentage_chart.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/utils/extensions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/utils/extensions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/simple_charts_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/simple_charts_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
       <recent name="$PROJECT_DIR$/lib/src/percentage" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.example">
+  <component name="RunManager" selected="Flutter Test.tests in simple_charts_test.dart">
     <configuration name="example" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
       <method v="2" />
