@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Cell/Block user in dateCahrt
 class DateCell extends StatelessWidget {
   const DateCell({
     required this.blocWidth,

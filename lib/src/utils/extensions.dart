@@ -79,3 +79,10 @@ extension StringExtension on String {
 
 
 enum ChartDateDisplay { day, month, year }
+
+
+
+String getDateString(DateTime date) {
+  return '${date.day}/${date.month}';
+}
+

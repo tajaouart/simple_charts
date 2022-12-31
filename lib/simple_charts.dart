@@ -1,4 +1,4 @@
 library simple_charts;
 
-export 'src/date_chart.dart';
-export 'src/percentage_chart.dart';
+export 'src/date/date_chart.dart';
+export 'src/percentage/percentage_chart.dart';

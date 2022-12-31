@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:simple_charts/simple_charts.dart';
-import 'package:simple_charts/src/components/date_cell.dart';
+import 'package:simple_charts/src/date/date_cell.dart';
 
 import 'data/data.dart';
 
