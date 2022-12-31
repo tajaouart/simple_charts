@@ -2,6 +2,8 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_charts/src/utils/extensions.dart';
 
+import 'components/date_cell.dart';
+
 class DateChart extends StatelessWidget {
   const DateChart({
     required this.data,
@@ -82,7 +84,6 @@ class DateChart extends StatelessWidget {
     }
     final maxValue = values.isEmpty ? 0 : values.max;
 
-    final primaryColor = Theme.of(context).colorScheme.primary;
     return Material(
       child: SizedBox(
         height: height,
@@ -93,7 +94,7 @@ class DateChart extends StatelessWidget {
                 children: [
                   if (displayYAxis)
                     Padding(
-                      padding:  EdgeInsets.only(bottom: displayXAxis ? 32 : 0),
+                      padding: EdgeInsets.only(bottom: displayXAxis ? 32 : 0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: List.generate(3, (index) {
@@ -140,7 +141,7 @@ class DateChart extends StatelessWidget {
                               return Row(
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: List.generate(total, (index) {
-                                  final key = keys.where((element) {
+                                  final keysList = keys.where((element) {
                                     switch (display) {
                                       case ChartDateDisplay.day:
                                         return keys[dataIndex].sameDay(
@@ -180,23 +181,14 @@ class DateChart extends StatelessWidget {
                                               maxHeight) /
                                           (maxValue == 0 ? 1 : maxValue);
 
-                                  if (key.isNotEmpty) {
+                                  if (keysList.isNotEmpty) {
                                     dataIndex++;
                                   }
 
-                                  return Padding(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: blocWidth > 24 ? 2 : 0,
-                                    ),
-                                    child: Container(
-                                      color: key.isEmpty
-                                          ? Colors.transparent
-                                          : primaryColor,
-                                      height: key.isEmpty ? 0 : value,
-                                      width: blocWidth > 24
-                                          ? blocWidth - 4
-                                          : blocWidth,
-                                    ),
+                                  return DateCell(
+                                    keys: keysList,
+                                    value: value,
+                                    blocWidth: blocWidth,
                                   );
                                 }),
                               );
@@ -248,7 +240,7 @@ class DateChart extends StatelessWidget {
   }
 
   String getDateString(DateTime date) {
-    return '${date.day} / ${date.month}';
+    return '${date.day}/${date.month}';
   }
 
   DateTime? calcMaxDate(List<DateTime> dates) {
